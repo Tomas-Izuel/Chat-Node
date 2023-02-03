@@ -32,6 +32,10 @@ const httpServer = app.listen(8080, () => {
 export const socketServer = new Server(httpServer);
 
 socketServer.on("connection", (socket) => {
+  socket.on("newUser", (user) => {
+    socket.broadcast.emit("broadcast", user);
+  });
+
   socket.on("sendMessage", async (ObjMessage) => {
     if (!ObjMessage.bot) {
       messageCards.push(ObjMessage);
@@ -41,4 +45,8 @@ socketServer.on("connection", (socket) => {
     }
     socketServer.emit("sendChat", messageCards);
   });
+});
+
+socketServer.on("disconnect", (socket) => {
+  console.log(socket);
 });

@@ -32,6 +32,7 @@ Swal.fire({
     timer: 2500,
   });
   user = username.value;
+  socket.emit("newUser", user);
   sessionStorage.setItem("user", user);
 });
 
@@ -80,4 +81,13 @@ socket.on("sendChat", (messageCards) => {
     }
   });
   chat.innerHTML = chatRender;
+  window.scrollTo(0, document.body.scrollHeight);
+});
+
+socket.on("broadcast", (username) => {
+  Toastify({
+    text: `${username} is now connected`,
+
+    duration: 3000,
+  }).showToast();
 });
