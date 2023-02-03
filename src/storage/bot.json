@@ -1,0 +1,32 @@
+[
+  {
+    "type": "jokes",
+    "content": [
+      "Why did the tomato turn red? Because it saw the salad dressing!",
+      "Why don't scientists trust atoms? Because they make up everything.",
+      "Why did the scarecrow win an award? Because he was outstanding in his field.",
+      "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+      "I'm reading a book on anti-gravity. It's impossible to put down.",
+      "I used to play piano by ear, but now I use my hands.",
+      "Why do cows wear bells? Their horns don't work.",
+      "What do you call an alligator in a vest? An investi-gator.",
+      "Why was the math book sad? Because it had too many problems.",
+      "What's the difference between a poorly dressed man on a unicycle and a well-dressed man on a bicycle? Attire."
+    ]
+  },
+  {
+    "type": "facts",
+    "content": [
+      "July 20, 1969: The first moon landing by NASA's Apollo 11 mission.",
+      "November 9, 1989: The fall of the Berlin Wall.",
+      "December 7, 1941: The attack on Pearl Harbor.",
+      "September 11, 2001: The terrorist attacks on the World Trade Center and the Pentagon.",
+      "June 6, 1944: D-Day, the Allies' invasion of Nazi-occupied France.",
+      "July 4, 1776: The signing of the Declaration of Independence.",
+      "October 30, 1938: The radio broadcast of War of the Worlds by Orson Welles.",
+      "December 17, 1903: The Wright brothers' first successful powered flight.",
+      "June 28, 1914: The assassination of Archduke Franz Ferdinand, which sparked World War I.",
+      "February 14, 1929: The St. Valentine's Day Massacre in Chicago."
+    ]
+  }
+]

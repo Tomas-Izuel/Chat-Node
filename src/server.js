@@ -3,6 +3,7 @@ import { __dirname } from "./utils.js";
 import handlebars from "express-handlebars";
 import { Server } from "socket.io";
 import viewsRouter from "./routes/views.router.js";
+import { botMessageMaker } from "./botRouter.js";
 
 const app = express();
 
@@ -31,8 +32,13 @@ const httpServer = app.listen(8080, () => {
 export const socketServer = new Server(httpServer);
 
 socketServer.on("connection", (socket) => {
-  socket.on("sendMessage", (ObjMessage) => {
-    messageCards.push(ObjMessage);
+  socket.on("sendMessage", async (ObjMessage) => {
+    if (!ObjMessage.bot) {
+      messageCards.push(ObjMessage);
+    } else {
+      const botMessage = await botMessageMaker(ObjMessage);
+      await messageCards.push(botMessage);
+    }
     socketServer.emit("sendChat", messageCards);
   });
 });
